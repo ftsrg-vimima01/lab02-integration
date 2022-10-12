@@ -15,16 +15,16 @@ public class Person {
     private String firstName;
     private String lastName;
 
-    private String homeLongitude;
     private String homeLatitude;
+    private String homeLongitude;
 
     protected Person() {}
 
-    public Person(String firstName, String lastName, String homeLongitude, String homeLatitude) {
+    public Person(String firstName, String lastName, String homeLatitude, String homeLongitude) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.homeLongitude = homeLongitude;
         this.homeLatitude = homeLatitude;
+        this.homeLongitude = homeLongitude;
     }
 
     public int getId() {
@@ -39,9 +39,9 @@ public class Person {
         return lastName;
     }
 
-    public String getHomeLongitude() { return homeLongitude; }
-
     public String getHomeLatitude() { return homeLatitude; }
+
+    public String getHomeLongitude() { return homeLongitude; }
 
 
     @Override
@@ -52,13 +52,13 @@ public class Person {
         return id == person.id &&
                 Objects.equals(firstName, person.firstName) &&
                 Objects.equals(lastName, person.lastName) &&
-                Objects.equals(homeLongitude, person.homeLongitude) &&
-                Objects.equals(homeLatitude, person.homeLatitude);
+                Objects.equals(homeLatitude, person.homeLatitude) &&
+                Objects.equals(homeLongitude, person.homeLongitude);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, homeLongitude, homeLatitude);
+        return Objects.hash(id, firstName, lastName, homeLatitude, homeLongitude);
     }
 
     @Override
@@ -67,8 +67,8 @@ public class Person {
                 "id='" + id + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", homeLongitude='" + homeLongitude + '\'' +
                 ", homeLatitude='" + homeLatitude + '\'' +
+                ", homeLongitude='" + homeLongitude + '\'' +
                 '}';
     }
 }

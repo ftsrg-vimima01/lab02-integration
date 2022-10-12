@@ -45,8 +45,8 @@ public class ExampleController {
 
         if (foundPerson.isPresent()) {
             Person person = foundPerson.get();
-            response.put("longitude", person.getHomeLongitude());
             response.put("latitude", person.getHomeLatitude());
+            response.put("longitude", person.getHomeLongitude());
             return response;
         }
         response.put("error", String.format("Who is this '%s' you're talking about?", lastName));
